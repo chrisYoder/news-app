@@ -1,0 +1,23 @@
+.container {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: auto;
+	grid-template-areas: '. storyFeed storyFeed storyFeed .';
+	margin-top: 10px;
+	
+}	
+
+.storyFeed {
+	grid-area: storyFeed;
+	display: grid;
+	grid-gap: 1.5em;
+	
+}
+
+.story {
+	border: 1px solid #5d5d5d;
+	border-radius: 5px; 
+	padding: 5px;
+	box-shadow: 3px 3px 5px #5d5d5d;
+	
+}

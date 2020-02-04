@@ -1,0 +1,17 @@
+<div class='container'>
+	<div class='storyFeed'>
+		<div class='story' *ngFor='let article of articles'>
+			<h2 class='title'>
+				{{article.title}}
+			</h2>
+			
+			<img src='{{article.urlToImage}}' target="_blank" class='image' width='100%'/>
+			
+			<p class='description'>
+				{{article.description}}
+			</p>
+			
+			<a href='{{article.url}}' target="_blank">Would you like to know more...</a>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,15 @@
+<nav class='container'>
+	<div class='brand'>
+		<a routerLink='/home'>My News App</a>
+	</div>
+	
+	<div class='links'>
+		<a 
+			*ngFor='let link of links' 	
+			routerLink='/{{link.className}}' 
+			class='{{link.name}}'
+		>
+			{{link.name}}
+		</a>
+	</div>
+</nav>
