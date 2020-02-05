@@ -1,0 +1,25 @@
+.container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 50px;
+	grid-template-areas: 'attr year';
+	background-color: #222f5b;
+	color:  #946b2d;
+	align-items: center;
+	padding: 5px;
+}
+
+.attribution {
+	grid-area: attr;
+	justify-self: start;
+}
+
+.year {
+	grid-area: year;
+	justify-self: end;
+	
+}
+
+a {
+	color:  #946b2d;
+}

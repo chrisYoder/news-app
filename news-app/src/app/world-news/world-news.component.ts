@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../services/api-service.service';
 
 @Component({
   selector: 'app-world-news',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./world-news.component.css']
 })
 export class WorldNewsComponent implements OnInit {
-
-  constructor() { }
+	articles;
+  constructor(private apiService: ApiService) { }
 
   ngOnInit() {
-  }
-
+		return this.apiService.getWorldNews().subscribe(data =>{
+			console.log(data);
+			this.articles = data['articles'];
+		});
+	}
 }

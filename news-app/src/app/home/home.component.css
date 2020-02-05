@@ -1,0 +1,8 @@
+.headline {
+	display: grid;
+	align-items: center;
+	justify-items: center;
+	grid-template-rows: 100vh;
+	font-size: 3em;
+	font-weight: bold;
+}

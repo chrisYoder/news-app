@@ -6,10 +6,14 @@
 	<div class='links'>
 		<a 
 			*ngFor='let link of links' 	
-			routerLink='/{{link.className}}' 
+			routerLink='/{{link.className}}'	
+			 routerLinkActive="active"
 			class='{{link.name}}'
 		>
 			{{link.name}}
 		</a>
 	</div>
 </nav>
+
+<!-- routerLink='/{{link.className}}'	
+			 routerLinkActive="active" -->

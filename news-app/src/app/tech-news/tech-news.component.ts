@@ -2,20 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../services/api-service.service';
 
 @Component({
-  selector: 'app-us-news',
-  templateUrl: './us-news.component.html',
-  styleUrls: ['./us-news.component.css']
+  selector: 'app-tech-news',
+  templateUrl: './tech-news.component.html',
+  styleUrls: ['./tech-news.component.css']
 })
-export class UsNewsComponent implements OnInit {
+export class TechNewsComponent implements OnInit {
 	articles;
-	
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
-		this.apiService.getUsNews().subscribe((data) => {
+		return this.apiService.getTechNews().subscribe( data => {
 			console.log(data);
 			this.articles = data['articles'];
-		});
+		})
   }
 
 }
